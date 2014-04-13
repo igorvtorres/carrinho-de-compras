@@ -76,4 +76,17 @@ public class CarrinhoTest {
         else test = false;
         assertTrue(test);
     }
+    
+
+    @Test
+    public void testarListarProdutos(){
+        Carrinho c = new Carrinho();
+        Produto p = new Produto("Giully", 5.000);
+        c.add(p);
+        Produto a = new Produto("PHP", 25.000);
+        c.add(a);
+        boolean result = c.ListarProdutos();
+        assertTrue(result);
+    }
+    
 }
