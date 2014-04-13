@@ -27,4 +27,12 @@ public class Carrinho {
         }
         return menor;
     }
+    
+    public void remove (Produto p){
+        produtos.add(p);
+    }
+    
+    public boolean exists(Produto p){
+        return produtos.contains(p);
+    }
 }
