@@ -1,7 +1,7 @@
 package br.calebe.exemplos.ex01;
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -59,5 +59,21 @@ public class CarrinhoTest {
         boolean existe;
         existe = c.exists(p);
         assertFalse(existe);
+    }
+    
+    @Test
+    public void testarSaldoDoCarrinho(){
+        Carrinho c = new Carrinho();
+        Produto p = new Produto("Giully", 5.000);
+        c.add(p);
+        Produto a = new Produto("PHP", 25.000);
+        c.add(a);
+        double aux = c.ValorCarrinho();
+        double prc1 = p.getPreco();
+        double prc2 = a.getPreco();
+        boolean test;
+        if(aux - prc1 - prc2 == 0) test = true;
+        else test = false;
+        assertTrue(test);
     }
 }
