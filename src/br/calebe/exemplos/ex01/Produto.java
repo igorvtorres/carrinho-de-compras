@@ -31,4 +31,9 @@ public class Produto {
     public void trocaPreco(double x){
         this.preco = x;
     }
+    
+    public boolean PrecoNegativo(){
+        if(this.preco <= 0) return false;
+        else return true;
+    }
 }

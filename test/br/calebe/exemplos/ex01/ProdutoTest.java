@@ -44,6 +44,16 @@ public class ProdutoTest {
         existe = p.existsPreco(aux1);
         assertFalse(existe);
     }
+ 
+  @Test
+    public void testarPrecoNegativo(){
+        double aux1 = new Float(-5.00);
+        Produto p = new Produto("Giully", aux1);
+        p.PrecoNegativo();
+        boolean existe;
+        existe = p.PrecoNegativo();
+        assertFalse(existe);
+    }
 }
  
  
