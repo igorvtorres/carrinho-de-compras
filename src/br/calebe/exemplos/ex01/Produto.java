@@ -22,4 +22,13 @@ public class Produto {
     public boolean equals(Produto obj) {
         return nome.equals(obj.nome);
     }
+    
+    public boolean existsPreco(double p){
+        if(this.preco == p) return true;
+        else return false;       
+    }
+        
+    public void trocaPreco(double x){
+        this.preco = x;
+    }
 }

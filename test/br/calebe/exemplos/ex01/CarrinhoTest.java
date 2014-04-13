@@ -1,9 +1,9 @@
 package br.calebe.exemplos.ex01;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertFalse;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class CarrinhoTest {
 
@@ -53,12 +53,11 @@ public class CarrinhoTest {
     @Test
     public void testarRemoverUmProdutoDoCarrinho(){
         Carrinho c = new Carrinho();
-        Produto p = new Produto("Giully",19.99);
+        Produto p = new Produto("Giully", 5.78);
         c.add(p);
         c.remove(p);
         boolean existe;
         existe = c.exists(p);
         assertFalse(existe);
     }
-
 }
