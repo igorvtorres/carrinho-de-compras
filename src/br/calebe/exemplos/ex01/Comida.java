@@ -9,6 +9,7 @@ package br.calebe.exemplos.ex01;
  * @author Igor
  */
 public class Comida extends Produto{
+    
             private boolean perecivel ;
             private double peso; //A validade é em meses a partir do momento da abertura
     

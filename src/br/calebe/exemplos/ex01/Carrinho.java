@@ -10,6 +10,8 @@ public class Carrinho {
     public Carrinho() {
         produtos = new ArrayList<>();
     }
+    
+
 
     public void add(Produto produto) {
         produtos.add(produto);
@@ -49,4 +51,21 @@ public class Carrinho {
         return saldo;
     }
 
+     public boolean ListarProdutos(){
+            if (produtos.isEmpty()) {
+                System.out.println("Lista Vazia");
+                return true;
+            }
+            Integer i = 1;
+            Integer x = 0;
+            for(;x<1;x++){
+                for (Produto produto : produtos){ 
+                    System.out.println(i + "] " + produto.getNome() +" Preço: " + produto.getPreco());
+                    i++;
+                }
+            return true;
+            }
+            return false;
+       }
+    
 }
