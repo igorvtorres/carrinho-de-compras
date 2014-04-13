@@ -35,4 +35,18 @@ public class Carrinho {
     public void remove(Produto p) {
         produtos.remove(p);
     }
+    
+    
+    
+    public double ValorCarrinho(){
+        if (produtos.isEmpty()) {
+            return 0;
+        }
+        double saldo = 0.00;
+        for (Produto produto : produtos) {
+            saldo = saldo + produto.getPreco();
+        }
+        return saldo;
+    }
+
 }
